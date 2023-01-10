@@ -1,0 +1,98 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size:62.5% ;
+
+  --color-hsl : 240;
+  --color-icon-button: hsla(var(--color-hsl), 6% , 21% , 100%);
+  --bg-color-button: #E1E1E6;
+  --bg-button-color:#02799D;
+
+  --color-text-title: hsla(var(--color-hsl), 6% , 21% , 100%);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.hide {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+main {
+
+  align-self: center;
+
+}
+
+.container {
+  display: flex;
+  /*gap: 19.2rem; */
+  gap: clamp(6rem, -12rem + 32vw, 19.2rem);
+}
+
+.timer {
+  font-size: 12.6rem;
+  font-weight: 500;
+  line-height: 14.8rem;
+  
+  color: var(--color-text-title);
+
+  display: flex;
+
+    
+}
+
+.controls {
+  display: flex;
+  gap: 4rem;
+}
+
+.pause svg path {
+  fill: var(--color-icon-button);
+}
+
+
+button {
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+footer {
+  display: grid;
+  gap: 3.2rem ;
+  grid-template-columns: 1fr 1fr;
+}
+
+.color {
+  fill: var(--bg-button-color);
+}
+
+.color-ic {
+  fill: #FFFFFF;
+}
+
+@media (max-width:750px){
+
+  body{
+    display: grid;
+  }
+
+  .container {
+    display: grid;
+    gap: 8rem
+  }
+}
+
+
