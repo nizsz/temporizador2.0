@@ -15,7 +15,7 @@ const timer = Timer(controls)
  Events({timer,color,controls,Sound})
 
 
- //timer.getMinutes()
+ timer.getMinutes()
 
 
 
