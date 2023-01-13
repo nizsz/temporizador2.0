@@ -36,7 +36,7 @@ Projeto com o objetivo de decrementar o tempo sendo ele fornecido ou não, possu
 
 ## 🔖 Layout
 
-Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/Pw8yMsK7HFkD6aISZt6gPA/Stage-05---Focus-Timer-2.0/duplicate). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.  
+Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/nlJJAVuGDc1tnDKqUW4FJA/Stage-05---Dark-Mode-FocusTimer/duplicate?node-id=0%3A1). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.  
 
 ## 🧠 Aprendizado
 
