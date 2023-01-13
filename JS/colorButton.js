@@ -1,54 +1,105 @@
 import {
-florestColorBgSvg,
+fireplaceColorIconSvg,
 florestColorIconSvg,
-rainColorBgSvg,
 rainColorIconSvg,
-coffeeColorBgSvg,
 coffeeColorIconSvg,
-fireplaceColorBgSvg,
-fireplaceColorIconSvg
+buttonSoundCoffee,
+buttonSoundFlorest,
+buttonSoundRain,
+buttonSoundFirePlace,
+volumeFlorest,
+volumeRain,
+volumeCoffee,
+volumeFireplace
+
+
 } from "./elements.js"
 
 export default function(){
   function changeColorFlorest() {
-  florestColorBgSvg.classList.add('color')
-  florestColorIconSvg.classList.add('color-ic')
+  florestColorIconSvg.classList.add('button-icon')
+  buttonSoundFlorest.classList.add('button-selected')
+
+  volumeFlorest.classList.add('button-icon')
+  volumeFlorest.classList.add('color-white')
+  
 }
 
 function removeColorFlorest() {
-  florestColorBgSvg.classList.remove('color')
-  florestColorIconSvg.classList.remove('color-ic')
+  florestColorIconSvg.classList.remove('button-icon')
+  buttonSoundFlorest.classList.remove('button-selected')
+
+  volumeFlorest.classList.remove('button-icon')
+  volumeFlorest.classList.remove('color-white')
+  
 }
 
 function changeColorRain() {
-  rainColorBgSvg.classList.add('color')
-  rainColorIconSvg.classList.add('color-ic')
+  rainColorIconSvg.classList.add('button-icon')
+  buttonSoundRain.classList.add('button-selected')
+
+  volumeRain.classList.add('button-icon')
+  volumeRain.classList.add('color-white')
+  
+  
 }
 
 function removeColorRain() {
-  rainColorBgSvg.classList.remove('color')
-  rainColorIconSvg.classList.remove('color-ic')
+  rainColorIconSvg.classList.remove('button-icon')
+  buttonSoundRain.classList.remove('button-selected')
+
+  volumeRain.classList.remove('button-icon')
+  volumeRain.classList.remove('color-white')
+  
+
 }
 
 function changeColorCoffee() {
-  coffeeColorBgSvg.classList.add('color')
-  coffeeColorIconSvg.classList.add('color-ic')
+  coffeeColorIconSvg.classList.add('button-icon')
+  buttonSoundCoffee.classList.add('button-selected')
+
+  volumeCoffee.classList.add('button-icon')
+  volumeCoffee.classList.add('color-white')
+  
 }
 
 function removeColorCoffee() {
-  coffeeColorBgSvg.classList.remove('color')
-  coffeeColorIconSvg.classList.remove('color-ic')
+  coffeeColorIconSvg.classList.remove('button-icon')
+  buttonSoundCoffee.classList.remove('button-selected')
+
+  volumeCoffee.classList.remove('button-icon')
+  volumeCoffee.classList.remove('color-white')
+  
+  
 }
 
 function changeColorFireplace() {
-  fireplaceColorBgSvg.classList.add('color')
-  fireplaceColorIconSvg.classList.add('color-ic')
+  fireplaceColorIconSvg.classList.add('button-icon')
+  buttonSoundFirePlace.classList.add('button-selected')
+
+  volumeFireplace.classList.add('button-icon')
+  volumeFireplace.classList.add('color-white')
+
+  
+  
 }
 
 function removeColorFireplace() {
-  fireplaceColorBgSvg.classList.remove('color')
-  fireplaceColorIconSvg.classList.remove('color-ic')
+  fireplaceColorIconSvg.classList.remove('button-icon')
+  buttonSoundFirePlace.classList.remove('button-selected')
+
+  volumeFireplace.classList.remove('button-icon')
+  volumeFireplace.classList.remove('color-white')
+ 
+  
 }
+
+function Dark() {
+  let darkMode = document.querySelector("html")
+  darkMode.classList.toggle('dark-theme')
+}
+
+
   return {
     changeColorFlorest,
     removeColorFlorest,
@@ -57,7 +108,9 @@ function removeColorFireplace() {
     changeColorCoffee,
     removeColorCoffee,
     changeColorFireplace,
-    removeColorFireplace
+    removeColorFireplace,
+    Dark,
+    
   }
 
 }

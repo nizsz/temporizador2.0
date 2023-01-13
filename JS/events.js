@@ -7,7 +7,17 @@ import {
   buttonSoundFlorest,
   buttonSoundRain,
   buttonSoundCoffee,
-  buttonSoundFirePlace
+  buttonSoundFirePlace,
+  buttonDarkMode,
+  buttonLightMode,
+  volumeFlorest,
+  florestAudio,
+  volumeRain,
+  rainAudio,
+  coffeeAudio,
+  firePlaceAudio,
+  volumeCoffee,
+  volumeFireplace
 } from "./elements.js"
 
 
@@ -52,8 +62,9 @@ buttonSoundFlorest.addEventListener('click', function(){
   color.removeColorCoffee()
   color.removeColorFireplace()
   
+  
   Sound.florestOn()
-  Sound.reset()
+  
   
 })
 
@@ -63,9 +74,12 @@ buttonSoundRain.addEventListener('click', function(){
   color.removeColorFlorest()
   color.removeColorCoffee()
   color.removeColorFireplace()
+
+  
+
   
   Sound.rainOn()
-  Sound.reset()
+  
 })
 
 buttonSoundCoffee.addEventListener('click', function(){
@@ -74,8 +88,10 @@ buttonSoundCoffee.addEventListener('click', function(){
   color.removeColorFireplace()
   color.removeColorRain()  
 
+
+
   Sound.coffeeOn()
-  Sound.reset()
+  
 })
 
 buttonSoundFirePlace.addEventListener('click', function(){
@@ -84,7 +100,59 @@ buttonSoundFirePlace.addEventListener('click', function(){
   color.removeColorRain()
   color.removeColorCoffee()
   
+  
+  
   Sound.firePlaceOn()
-  Sound.reset()
+  
 })
+
+buttonLightMode.addEventListener('click', function() {
+
+  buttonLightMode.classList.add('hide')
+  buttonDarkMode.classList.remove('hide')
+
+  color.Dark()
+  
+  
+})
+
+
+
+buttonDarkMode.addEventListener('click', function() {
+
+  buttonLightMode.classList.remove('hide')
+  buttonDarkMode.classList.add('hide')
+
+  color.Dark()
+  
+
+})
+
+volumeFlorest.addEventListener('change', function(){
+
+  let volumek = volumeFlorest.value
+  florestAudio.volume = volumek
+
+  
+})
+
+volumeRain.addEventListener('change', function(){
+
+  let volumek = volumeRain.value
+  rainAudio.volume = volumek
+})
+
+volumeCoffee.addEventListener('change', function(){
+
+  let volumek = volumeCoffee.value
+  coffeeAudio.volume = volumek
+})
+
+volumeFireplace.addEventListener('change', function(){
+
+  let volumek = volumeFireplace.value
+  firePlaceAudio.volume = volumek
+  
+})
+
 }

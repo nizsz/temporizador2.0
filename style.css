@@ -7,11 +7,28 @@
   font-size:62.5% ;
 
   --color-hsl : 240;
-  --color-icon-button: hsla(var(--color-hsl), 6% , 21% , 100%);
+  
   --bg-color-button: #E1E1E6;
-  --bg-button-color:#02799D;
-
+  --bg-button-select:#02799D;
   --color-text-title: hsla(var(--color-hsl), 6% , 21% , 100%);
+  --color-icon-button: hsla(var(--color-hsl), 6% , 21% , 100%);
+  --button-color-icon: #FFFFFF;
+  --bg-body: #FFFFFF;
+  --color-volume: hsla(var(--color-hsl), 6% , 21% , 100%);
+  
+}
+
+
+.dark-theme {
+  --color-hsl : 240;
+  --color-icon-button: hsla(var(--color-hsl), 7% , 78% , 100%);
+  --color-text-title: #FFFFFF;
+  --bg-color-button: #29292E;
+  --bg-button-select: #0A3442;
+  --button-color-icon: #FFFFFF;
+  --bg-body: #121214;
+  --color-volume: #FFFFFF;
+
 }
 
 body {
@@ -20,12 +37,21 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+
+  background: var(--bg-body);
+  
 }
 
 .hide {
   display: none;
   opacity: 0;
   visibility: hidden;
+}
+
+.color-mode {
+  position: absolute;
+  top: 60px;
+  right: 60px;
 }
 
 main {
@@ -36,7 +62,6 @@ main {
 
 .container {
   display: flex;
-  /*gap: 19.2rem; */
   gap: clamp(6rem, -12rem + 32vw, 19.2rem);
 }
 
@@ -49,7 +74,6 @@ main {
 
   display: flex;
 
-    
 }
 
 .controls {
@@ -57,10 +81,20 @@ main {
   gap: 4rem;
 }
 
-.pause svg path {
+.pause svg path,
+.play svg path,
+.stop svg path,
+.add svg path,
+.subtract svg path {
   fill: var(--color-icon-button);
 }
 
+.florest-icon, 
+.rain-icon,
+.coffee-icon,
+.fireplace-icon {
+  fill: var(--color-icon-button);
+}
 
 button {
   background-color: transparent;
@@ -69,19 +103,56 @@ button {
   cursor: pointer;
 }
 
-footer {
+footer  {
   display: grid;
   gap: 3.2rem ;
   grid-template-columns: 1fr 1fr;
 }
 
-.color {
-  fill: var(--bg-button-color);
+footer button {
+
+  border-radius: 2.4rem;
+  background: var(--bg-color-button);
+
+  width: 13.8rem;
+  height: 15.2rem;
 }
 
-.color-ic {
-  fill: #FFFFFF;
+.volume {
+  appearance: none;
+  width: 9rem;
+  height: 0.4rem;
+  margin-top: 3.2rem;
+  background: var(--color-volume);
+
+  border-radius: 0.6rem;
 }
+
+.volume::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 1rem;
+  background: var(--color-volume);
+}
+
+
+.button-selected {
+  background: var(--bg-button-select);
+}
+
+.button-icon {
+  fill: var(--button-color-icon);
+  background: var(--button-color-icon);
+  
+}
+
+.color-white::-webkit-slider-thumb {
+  background: var(--button-color-icon);
+}
+
+
+
 
 @media (max-width:750px){
 
